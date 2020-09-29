@@ -16,7 +16,7 @@
         "all_frames": false,
         "js": [ "highlight.js" ],
         "css": ["highlight.css"],
-        "matches": [ "<all_urls>" ],
+        "matches": [ "https://*.linkedin.com/*", "https://*.indeed.com/*", "https://*.glassdoor.com/*", "https://*.dice.com/*" ],
         "run_at": "document_idle"
      } ],
 
