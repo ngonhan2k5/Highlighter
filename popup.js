@@ -4,8 +4,9 @@
 
 'use strict';
 
-let changeKeyword = document.getElementById('save');
-
+let changeKeyword = document.getElementById('save'),
+    txtKeyword = document.getElementById('keyword');
+    
 changeKeyword.onclick = function (element) {
     let kw = txtKeyword.value;
     kw = kw.split(',').map(k=>k.trim())
@@ -27,8 +28,7 @@ changeKeyword.onclick = function (element) {
 
 chrome.storage.sync.get('keywords', function (data) {
     console.log('popup', data.keywords);
-    
-    let txtKeyword = document.getElementById('keyword');
+
     if (data && data.keywords)
         txtKeyword.value = data.keywords.join(', ');
 

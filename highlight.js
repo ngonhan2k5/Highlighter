@@ -107,7 +107,7 @@
         };
 
         return {
-            start: function (force) {
+            start: function () {
                 if (_isObserving) {
                     observeDOM.stop();
                 }
@@ -129,9 +129,6 @@
                     obj.addEventListener('DOMNodeRemoved', _callback, false)
                 }
 
-                if (force) {
-                    setTimeout(_callback, bounceTime / 2)
-                }
                 _isObserving = true;
             },
             stop: function () {
@@ -170,8 +167,8 @@
             rj(e)
         }
     })).then(function (d) {
-        observeDOM.changeKw(d)
-        observeDOM.start(true); //force start
+        observeDOM.start();
+        observeDOM.changeKw(d, true);  //force start
     });
 
 
