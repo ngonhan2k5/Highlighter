@@ -97,7 +97,7 @@
                 find(document.body.childNodes);
                 doReplaces();
                 console.timeEnd('find')
-                doScrollIntoView({ block: 'center', inline: 'center' }); // not work well
+                // doScrollIntoView({ block: 'center', inline: 'center' }); // wait until add config
                 handle = null;
             }, bounceTime)
         }

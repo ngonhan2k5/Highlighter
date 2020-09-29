@@ -2,7 +2,7 @@
     "name": "Highlighter",
     "version": "0.0.1",
     "description": "A Chrome extension that highlighting predefined keywords",
-    "permissions": ["http://*/*", "https://*/*", "activeTab", "storage", "webNavigation"],
+    "permissions": ["storage"],
     "background": {
       "scripts": ["background.js"],
       "persistent": false

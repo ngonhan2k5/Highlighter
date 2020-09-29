@@ -31,17 +31,6 @@ chrome.runtime.onStartup.addListener(function () {
 
 });
 
-// When page change url
-handleNavigation = function (tab) {
-    console.log(222, arguments);
-
-    chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
-        tabs && tabs.length && chrome.tabs.sendMessage(tabs[0].id, {type:"navi"});
-    });
-
-}
-chrome.webNavigation.onHistoryStateUpdated.addListener(handleNavigation);
-
 // Receive message
 chrome.runtime.onMessage.addListener(handleMessage);
 
